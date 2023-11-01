@@ -1,4 +1,7 @@
 {
-  "extends": "tsconfig/vite.json",
-  "include": ["src"]
+  "extends": "astro/tsconfigs/strictest",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
+  }
 }
