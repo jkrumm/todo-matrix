@@ -1,4 +1,6 @@
 {
+  "name": "api",
+  "version": "0.0.0",
   "scripts": {
     "dev": "wrangler dev src/index.ts",
     "deploy": "wrangler deploy --minify src/index.ts"
@@ -9,5 +11,6 @@
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20230914.0",
     "wrangler": "^3.14.0"
-  }
+  },
+  "packageManager": "pnpm@8.6.10"
 }

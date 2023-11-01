@@ -1,4 +1,6 @@
 {
+  "name": "todo-matrix",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "build": "turbo run build",
@@ -12,6 +14,5 @@
     "tsconfig": "workspace:*",
     "turbo": "latest"
   },
-  "packageManager": "pnpm@8.6.10",
-  "name": "todo-matrix"
+  "packageManager": "pnpm@8.6.10"
 }
