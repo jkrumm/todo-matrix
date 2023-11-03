@@ -1,40 +1,58 @@
 module.exports = {
   env: {
     node: true,
+    browser: true,
+    es2021: true,
   },
   parser: "@typescript-eslint/parser",
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
     "plugin:astro/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended",
     "prettier",
   ],
-  plugins: ["@typescript-eslint"],
+  plugins: ["@typescript-eslint", "react", "react-hooks", "jsx-a11y"],
   parserOptions: {
     sourceType: "module",
-    ecmaVersion: 2020,
+    ecmaFeatures: {
+      jsx: true,
+    },
+    project: "./tsconfig.json",
   },
   rules: {
+    "react/react-in-jsx-scope": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "@typescript-eslint/explicit-function-return-type": "warn",
+    "jsx-a11y/accessible-emoji": "warn",
+    "react/prop-types": "off", // since you are using TypeScript, you can disable prop-types as TypeScript provides static typing.
+  },
+  ignorePatterns: [
+    "node_modules/",
+    "**/__snapshots__",
+    "dist/",
+    ".eslintrc.cjs",
+  ],
+  settings: {
+    react: {
+      version: "detect",
+    },
+    "import/resolver": {
+      typescript: {},
+    },
   },
   overrides: [
     {
-      // Define the configuration for `.astro` file.
       files: ["*.astro"],
-      // Allows Astro components to be parsed.
       parser: "astro-eslint-parser",
-      // Parse the script in `.astro` as TypeScript by adding the following configuration.
-      // It's the setting you need when using TypeScript.
       parserOptions: {
         parser: "@typescript-eslint/parser",
         extraFileExtensions: [".astro"],
       },
-      rules: {
-        // override/add rules settings here, such as:
-        // "astro/no-set-html-directive": "error"
-      },
     },
-    // ...
   ],
-  ignorePatterns: ["node_modules/", "dist/", ".eslintrc.js"],
 };

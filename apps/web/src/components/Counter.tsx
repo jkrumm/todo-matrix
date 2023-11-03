@@ -1,16 +1,16 @@
-import { useState } from "react";
+import { useState, type ReactElement } from "react";
 import "./Counter.css";
 
-export default function Counter({
+const Counter = ({
   children,
   count: initialCount,
 }: {
   children: JSX.Element;
   count: number;
-}) {
+}): ReactElement => {
   const [count, setCount] = useState(initialCount);
-  const add = () => setCount(i => i + 1);
-  const subtract = () => setCount(i => i - 1);
+  const add = (): void => setCount(i => i + 1);
+  const subtract = (): void => setCount(i => i - 1);
 
   return (
     <>
@@ -22,4 +22,6 @@ export default function Counter({
       <div className="counter-message">{children}</div>
     </>
   );
-}
+};
+
+export default Counter;

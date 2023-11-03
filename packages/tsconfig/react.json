@@ -10,8 +10,6 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "noEmit": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
     "jsx": "react-jsx"
   }
 }
