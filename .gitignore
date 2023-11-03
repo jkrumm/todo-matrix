@@ -31,10 +31,10 @@ pnpm-lock.yaml
 # misc
 .DS_Store
 *.pem
-.idea
+**.idea
 .envrc
 # Editor directories and files
-.vscode/*
+**.vscode/*
 !.vscode/extensions.json
 *.suo
 *.ntvs*

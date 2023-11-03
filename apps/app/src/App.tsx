@@ -1,8 +1,14 @@
+// import { SampleInterface } from "api/lib/sample.interface";
+import type { ReactElement } from "react";
 import { useState } from "react";
 import "./App.css";
 
-function App() {
+const App = (): ReactElement => {
   const [count, setCount] = useState(0);
+  //
+  // const isSample: SampleInterface = {
+  //   isSample: true,
+  // };
 
   return (
     <>
@@ -20,6 +26,6 @@ function App() {
       </p>
     </>
   );
-}
+};
 
 export default App;
