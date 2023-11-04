@@ -1,5 +1,5 @@
 {
-  "name": "api",
+  "name": "@todo-matrix/api",
   "version": "0.0.0",
   "scripts": {
     "dev": "wrangler dev src/index.ts",

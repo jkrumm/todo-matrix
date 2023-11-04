@@ -1,5 +1,6 @@
 {
-  "name": "web",
+  "name": "@todo-matrix/web",
+  "private": true,
   "type": "module",
   "version": "0.0.0",
   "scripts": {
@@ -12,14 +13,14 @@
     "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx,.astro,.mjs,.cjs . --fix"
   },
   "dependencies": {
+    "@todo-matrix/ui": "*",
     "@astrojs/check": "^0.3.0",
     "@astrojs/react": "^3.0.4",
     "@astrojs/tailwind": "^5.0.2",
     "astro": "^3.4.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "tailwindcss": "^3.3.5",
-    "ui": "*"
+    "tailwindcss": "^3.3.5"
   },
   "devDependencies": {
     "eslint-config-custom": "workspace:*",

@@ -1,14 +1,15 @@
-// import { SampleInterface } from "api/lib/sample.interface";
+import type { SampleInterface } from "@todo-matrix/api/lib/types/sample.interface";
 import type { ReactElement } from "react";
 import { useState } from "react";
 import "./App.css";
+import { Button } from "@todo-matrix/ui/components/Button";
 
 const App = (): ReactElement => {
   const [count, setCount] = useState(0);
-  //
-  // const isSample: SampleInterface = {
-  //   isSample: true,
-  // };
+
+  const isSample: SampleInterface = {
+    isSample: true,
+  };
 
   return (
     <>
@@ -24,6 +25,9 @@ const App = (): ReactElement => {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more.
       </p>
+      <br />
+      {isSample.isSample ? "isSample" : "isNotSample"}
+      <Button />
     </>
   );
 };
