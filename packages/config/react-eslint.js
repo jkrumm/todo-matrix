@@ -34,5 +34,4 @@ module.exports = {
       version: "detect", // tells eslint-plugin-react to automatically detect the version of React to use
     },
   },
-  ignorePatterns: ["node_modules/", "dist/"],
 };

@@ -1,4 +1,11 @@
+const projectConfig = require("@todo-matrix/config/astro-eslint.js");
+
 module.exports = {
-  root: true,
-  extends: ["custom/astro.js"],
-};
+  ...projectConfig,
+  ignorePatterns: ["node_modules/", "dist/"],
+  parserOptions: {
+    ...projectConfig.parserOptions,
+    tsconfigRootDir: __dirname,
+    project: "./tsconfig.json",
+  },
+}

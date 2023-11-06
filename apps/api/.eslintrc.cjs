@@ -1,4 +1,11 @@
+const projectConfig = require("@todo-matrix/config/ts-eslint.js");
+
 module.exports = {
-  root: true,
-  extends: ["custom/hono.js"],
-};
+  ...projectConfig,
+  ignorePatterns: ["node_modules/", "dist/"],
+  parserOptions: {
+    ...projectConfig.parserOptions,
+    tsconfigRootDir: __dirname,
+    project: "./tsconfig.json",
+  },
+}

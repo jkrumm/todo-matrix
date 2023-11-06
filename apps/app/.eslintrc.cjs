@@ -1,4 +1,11 @@
+const projectConfig = require("@todo-matrix/config/react-eslint.js");
+
 module.exports = {
-  root: true,
-  extends: ["custom/react.js"],
-};
+    ...projectConfig,
+    ignorePatterns: ["node_modules/", "dist/", "vite.config.ts"],
+    parserOptions: {
+        ...projectConfig.parserOptions,
+        tsconfigRootDir: __dirname,
+        project: "./tsconfig.json",
+    },
+}

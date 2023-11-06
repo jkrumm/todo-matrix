@@ -10,7 +10,6 @@
     "hono": "^3.9.1"
   },
   "devDependencies": {
-    "eslint-config-custom": "workspace:*",
     "@cloudflare/workers-types": "^4.20230914.0",
     "wrangler": "^3.14.0"
   },

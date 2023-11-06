@@ -1,3 +1,11 @@
+const projectConfig = require("@todo-matrix/config/react-eslint.js");
+
 module.exports = {
-  extends: ["custom/react.js"],
+  ...projectConfig,
+  ignorePatterns: ["node_modules/", ".eslintrc.js"],
+  parserOptions: {
+    ...projectConfig.parserOptions,
+    tsconfigRootDir: __dirname,
+    project: "./tsconfig.json",
+  },
 };

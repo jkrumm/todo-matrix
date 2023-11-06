@@ -31,12 +31,6 @@ module.exports = {
     "jsx-a11y/accessible-emoji": "warn",
     "react/prop-types": "off", // since you are using TypeScript, you can disable prop-types as TypeScript provides static typing.
   },
-  ignorePatterns: [
-    "node_modules/",
-    "**/__snapshots__",
-    "dist/",
-    ".eslintrc.cjs",
-  ],
   settings: {
     react: {
       version: "detect",
