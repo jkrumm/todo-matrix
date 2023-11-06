@@ -17,5 +17,9 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "exports": {
+    "./tsconfig/*": "./tsconfig/*",
+    "./eslint/*": "./eslint/*"
   }
 }

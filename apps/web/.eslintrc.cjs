@@ -1,4 +1,4 @@
-const projectConfig = require("@todo-matrix/config/astro-eslint.js");
+const projectConfig = require("@todo-matrix/config/eslint/astro-eslint.js");
 
 module.exports = {
   ...projectConfig,

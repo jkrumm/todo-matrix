@@ -1,4 +1,4 @@
-const projectConfig = require("@todo-matrix/config/ts-eslint.js");
+const projectConfig = require("@todo-matrix/config/eslint/ts-eslint.js");
 
 module.exports = {
   ...projectConfig,

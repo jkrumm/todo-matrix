@@ -1,4 +1,4 @@
 {
-  "extends": "@todo-matrix/config/hono-tsconfig.json",
+  "extends": "@todo-matrix/config/tsconfig/hono-tsconfig.json",
   "include": ["src", "lib"]
 }

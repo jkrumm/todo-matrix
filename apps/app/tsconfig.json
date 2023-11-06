@@ -1,4 +1,4 @@
 {
-  "extends": "@todo-matrix/config/react-tsconfig.json",
+  "extends": "@todo-matrix/config/tsconfig/react-tsconfig.json",
   "include": ["src"]
 }
